@@ -2,62 +2,66 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Do the Math</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do the Math</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
-  <div class="jumbotron">
-    <h1 class="display-4">Crystal Collector!</h1>
-    <h3 class="lead">Rules of the Game</h3>
-    <hr class="my-4">
-    <p></p>In the "Match the Number" box there will be a random number, betweeen 19 and 120, displayed.</p>
-      <p>Below that are 4 crystal buttons; each has a different value between 1 and 12.</p>
-      <p>When you click on a cyrstal the value amount will be added to your total score.</p>
-      <p>You can click on a crystal as many times as you like.</p>
-      <p>The game is won by getting your total score to equal the random number.</p>
-      <p>If you go over the amount you lose the game.</p>
-      <p>Then you can restart again with a new random number and new values on each crystal!</p>
-    <h5>Good Luck!!!</h5>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Computer Total</h5>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <p class="card-text">The Number to Match: <span id="computerRN"></span></p>
+    <div></div>
+    <div class="jumbotron">
+        <h1 class="display-4">Crystal Collector!</h1>
+        <h3 class="lead">Rules of the Game</h3>
+        <hr class="my-4">
+        <p>In the "Match the Number" box there will be a random number, betweeen 19 and 120, displayed.</p>
+        <p>Below that are 4 crystal buttons; each has a different hidden value between 1 and 12.</p>
+        <p>When you click on a cyrstal the value amount will be added to your total score.</p>
+        <p>You can click on a crystal as many times as you like.</p>
+        <p>The game is won by getting your total score to equal the random number.</p>
+        <p>If you go over the amount you lose the game.</p>
+        <p>Then you can restart again with a new random number and new values on each crystal!</p>
+        <h5>Good Luck!!!</h5>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      Wins: <span id="wins"></span>
+    <div class="card computerRN" style="width: 18rem;">
+        <div class="card-body">
+            <h3 class="card-title">The Number to Match:</h3>
+            <br>
+            <p class="card-text"><span id="computerRN"></span></p>
+        </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      Losses: <span id="losses"></span>
+    <div class="winslosses">
+        <div class="card">
+            <div class="card-body">
+                Wins: <span id="wins"></span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                Losses: <span id="losses"></span>
+            </div>
+        </div>
     </div>
-  </div>
+    <div id="crystals">
+        <img id="Crystal1" src="assets/images/Orange Crystal.jpg" alt="Crystal1" width="170px" length="170px">
+        <img id="Crystal2" src="assets/images/Pink Crystal.jpg" alt="Crystal2" width="170px" length="170px">
+        <img id="Crystal3" src="assets/images/Green Crystal.jpg" alt="Crystal3" width="170px" length="170px">
+        <img id="Crystal4" src="assets/images/RedCrystal.jpg" alt="Crystal4" width="170px" length="170px">
+    </div>
+    <div class="card totalSoFar" style="width: 18rem;">
+        <div class="card-body">
+            <h3 class="card-title">Your Total So Far</h3>
+            <p class="card-text"><span id="totalSoFar"></span></p>
 
-  <div id="crystals">
-    <img id="Crystal1" src="assets/images/Orange Crystal.jpg" alt="Crystal1" width="170px" length="170px">
-    <img id="Crystal2" src="assets/images/Pink Crystal.jpg" alt="Crystal2" width="170px" length="170px">
-    <img id="Crystal3" src="assets/images/Green Crystal.jpg" alt="Crystal3" width="170px" length="170px">
-    <img id="Crystal4" src="assets/images/RedCrystal.jpg" alt="Crystal4" width="170px" length="170px">
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h3 class="card-title">Your Total So Far</h3>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <p class="card-text"><span id="totalSoFar"></span></p>
-
+        </div>
     </div>
-  </div>
-  <button type="button" class="btn btn-outline-success button">Restart</button>
-  <script src="assets/javascript/game.js"></script>
+    <button type="button" class="btn btn-success">Restart</button>
+    <script src="assets/javascript/game.js"></script>
 
 </body>
 

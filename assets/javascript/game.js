@@ -8,7 +8,7 @@ $(document).ready(function () {
     var crystal2 = 0;
     var crystal3 = 0;
     var crystal4 = 0; 
-    var randomNumbers = [];
+   
 
 
     function reset() {
@@ -37,20 +37,16 @@ $(document).ready(function () {
         $("#totalSoFar").text(totalSoFar);
         console.log($(this).attr("data-alt"))
 
-
-
+        if (computerRN === totalSoFar) {
+            wins++
+            $("#wins").text(wins);
+        }
+        else if (computerRN < totalSoFar) {
+            losses++
+            $("#losses").text(losses);
+        }
+    
     });
-
-
-    if (computerRN === totalSoFar) {
-        wins++
-        $("#wins").text(wins);
-    }
-    else if (computerRN < totalSoFar) {
-        losses++
-        $("#losses").text(losses);
-    }
-
 
     $(".button").on("click", function () {
 
