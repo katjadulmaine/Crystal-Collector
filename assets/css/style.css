@@ -5,13 +5,14 @@
     box-sizing: border-box;
 }
 .jumbotron {
-    margin-bottom: 0px;
-    background-image: url("../images/jumbotron.jpg");
+    margin-bottom: 0%;
+    background-image: url("../images/bg-html.jpeg");
     background-position: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(235, 40, 235);
     text-align: center;
+    
      
 }
 .container {
